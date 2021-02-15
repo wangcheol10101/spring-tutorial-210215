@@ -21,7 +21,7 @@ public class HelloBeanJUnitTest {
 		context = new GenericXmlApplicationContext("config/beans.xml");
 	}
 	
-	@Test
+	@Test @Ignore
 	public void test2() {
 		Hello hello = (Hello) context.getBean("hello");
 		Hello hello2 = (Hello) context.getBean("hello");
@@ -29,7 +29,7 @@ public class HelloBeanJUnitTest {
 		assertSame(hello, hello2);
 	}
 	
-	@Test @Ignore
+	@Test
 	public void test1() {
 		// TODO Auto-generated method stub
 		// Hello Bean 가져오기
